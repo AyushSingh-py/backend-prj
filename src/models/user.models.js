@@ -3,7 +3,6 @@ import jwt from 'jsonwebtoken';
 import bcrypt from 'bcrypt';
 
 
-
 const userSchema = new Schema({
     userName : {
         type : String,
@@ -64,8 +63,8 @@ userSchema.methods.isPasswordCorrect = async function(password){
 userSchema.methods.generateAccessToken = function(){
     return jwt.sign(
         {
-            _id:this._id,
-            email:this.email,
+            _id : this._id,
+            email : this.email,
             userName : this.userName,
             fullName : this.fullName
         },
