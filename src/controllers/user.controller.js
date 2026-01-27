@@ -5,7 +5,7 @@ import {uploadOnCloudinary} from "../utils/cloudinary.js"
 import { ApiResponse } from "../utils/ApiResponse.js";
 
 
-const generateAccessAndRefreshToken = async(userId){
+const generateAccessAndRefreshToken = async(userId)=>{
     try {
         const user = await User.findById(userId)
 
